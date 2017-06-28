@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
     List<GenericObject> tabList;
 
-    List<GenericObject> PRUEBA;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
