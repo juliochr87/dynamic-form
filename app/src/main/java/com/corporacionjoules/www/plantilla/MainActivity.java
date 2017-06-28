@@ -17,6 +17,7 @@ import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.SubMenu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -40,6 +41,7 @@ import utils.ws.WebService;
 public class MainActivity extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener {
 
     List<GenericObject> tabList;
+    List<GenericObject> formList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +49,7 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         setContentView(R.layout.activity_main);
 
         tabList = new WebService().getTabs();
+        formList = new WebService().getForms();
 
         loadMainMenu();
 
@@ -60,7 +63,6 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         NavigationView  navigationView      = (NavigationView)  findViewById(R.id.nav_view);
         ViewPager       viewPager           = (ViewPager)       findViewById(R.id.container);
         TabLayout       tabLayout           = (TabLayout)       findViewById(R.id.tabs);
-        Group           group               = (Group)           findViewById(R.id.groupMenu);
 
         setSupportActionBar(toolbar);
 
@@ -74,6 +76,20 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
         tabLayout.setupWithViewPager(viewPager);
 
+        showFormMenu(navigationView);
+
+
+    }
+
+    public void showFormMenu(NavigationView navigationView)
+    {
+        Menu menu = navigationView.getMenu();
+
+        for (GenericObject genericObject:formList) {
+            menu.add(0, 0, 0, genericObject.toString()).setIcon(R.drawable.ic_menu_share);
+        }
+        menu.addSubMenu("ASDASD");
+        menu.setGroupCheckable(0,true,true);
     }
 
 
@@ -115,7 +131,7 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+       /* if (id == R.id.nav_camera) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
 
@@ -128,7 +144,7 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         } else if (id == R.id.nav_send) {
 
         }
-
+*/
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

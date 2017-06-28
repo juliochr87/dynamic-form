@@ -27,7 +27,14 @@ public class WebService implements IWebService {
 
     @Override
     public List<GenericObject> getForms() {
-        return null;
+        List<GenericObject> tabList = new ArrayList<>();
+
+        for(int i = 1; i<=10; i++){
+            GenericObject genericObject = new GenericObject(Integer.toString(i),"TAB " + i);
+            tabList.add(genericObject);
+        }
+
+        return tabList;
     }
 
     @Override

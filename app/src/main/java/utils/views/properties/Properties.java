@@ -17,7 +17,7 @@ public class Properties {
 
     public void setPadding(View view){
 
-        view.setPadding(100,100,100,100);
+       // view.setPadding(100,100,100,100);
     }
 
 
