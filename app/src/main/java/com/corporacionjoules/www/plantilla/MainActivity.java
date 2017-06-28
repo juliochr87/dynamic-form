@@ -40,7 +40,8 @@ import utils.ws.WebService;
 public class MainActivity extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener {
 
     List<GenericObject> tabList;
-    Prueba
+
+    List<GenericObject> PRUEBA;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
