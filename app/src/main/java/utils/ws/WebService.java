@@ -18,7 +18,7 @@ public class WebService implements IWebService {
         List<GenericObject> tabList = new ArrayList<>();
 
         for(int i = 1; i<=10; i++){
-            GenericObject genericObject = new GenericObject(Integer.toString(i),"TAB " + i);
+            GenericObject genericObject = new GenericObject(Integer.toString(i),"Sección " + i);
             tabList.add(genericObject);
         }
 
@@ -30,7 +30,7 @@ public class WebService implements IWebService {
         List<GenericObject> tabList = new ArrayList<>();
 
         for(int i = 1; i<=10; i++){
-            GenericObject genericObject = new GenericObject(Integer.toString(i),"TAB " + i);
+            GenericObject genericObject = new GenericObject(Integer.toString(i),"Formulario " + i);
             tabList.add(genericObject);
         }
 

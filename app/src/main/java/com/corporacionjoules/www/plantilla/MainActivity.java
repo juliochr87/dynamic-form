@@ -17,13 +17,11 @@ import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.SubMenu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-import java.security.acl.Group;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -78,17 +76,15 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
         showFormMenu(navigationView);
 
-
     }
 
     public void showFormMenu(NavigationView navigationView)
     {
-        Menu menu = navigationView.getMenu();
+        Menu menu = navigationView.getMenu().getItem(0).getSubMenu();
 
         for (GenericObject genericObject:formList) {
             menu.add(0, 0, 0, genericObject.toString()).setIcon(R.drawable.ic_menu_share);
         }
-        menu.addSubMenu("ASDASD");
         menu.setGroupCheckable(0,true,true);
     }
 
