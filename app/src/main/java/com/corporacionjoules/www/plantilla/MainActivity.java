@@ -13,7 +13,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -192,7 +191,7 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
             View v3 = new SpinnerObjectView(getContext()).addSpinner(coupleArray,false);
 
             new Properties().setPadding(v3);
-            View v4 = new TextInputLayoutObjectView(getContext()).addTextInputLayout(new EditTextObjectView(getContext()).addEditText("Prueba",1, InputType.TYPE_CLASS_PHONE),new LinearLayout.LayoutParams(AppBarLayout.LayoutParams.MATCH_PARENT, AppBarLayout.LayoutParams.MATCH_PARENT));
+            View v4 = new TextInputLayoutObjectView(getContext()).addTextInputLayout(new EditTextObjectView(getContext()).addEditTextTypeTime("Prueba"), new LinearLayout.LayoutParams(AppBarLayout.LayoutParams.MATCH_PARENT, AppBarLayout.LayoutParams.MATCH_PARENT));
 
             new Properties().setPadding(v4);
             List<View> listaView = new ArrayList<>();
