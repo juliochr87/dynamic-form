@@ -60,6 +60,7 @@ public class EditTextObjectView extends ObjectView {
 
         editText.setHint(textHint);
         editText.setInputType(InputType.TYPE_NULL);
+        editText.setFocusable(false);
         editText.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -84,6 +85,7 @@ public class EditTextObjectView extends ObjectView {
 
         editText.setHint(textHint);
         editText.setInputType(InputType.TYPE_NULL);
+        editText.setFocusable(false);
         editText.setOnClickListener(new View.OnClickListener() {
 
             @Override

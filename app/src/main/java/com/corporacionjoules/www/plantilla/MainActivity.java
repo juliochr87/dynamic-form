@@ -191,16 +191,18 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
             View v3 = new SpinnerObjectView(getContext()).addSpinner(coupleArray,false);
 
             new Properties().setPadding(v3);
-            View v4 = new TextInputLayoutObjectView(getContext()).addTextInputLayout(new EditTextObjectView(getContext()).addEditTextTypeTime("Prueba"), new LinearLayout.LayoutParams(AppBarLayout.LayoutParams.MATCH_PARENT, AppBarLayout.LayoutParams.MATCH_PARENT));
+            View v4 = new TextInputLayoutObjectView(getContext()).addTextInputLayout(new EditTextObjectView(getContext()).addEditTextTypeTime("Hora"), new LinearLayout.LayoutParams(AppBarLayout.LayoutParams.MATCH_PARENT, AppBarLayout.LayoutParams.MATCH_PARENT));
 
             new Properties().setPadding(v4);
             List<View> listaView = new ArrayList<>();
+
+            View v5 = new TextInputLayoutObjectView(getContext()).addTextInputLayout(new EditTextObjectView(getContext()).addEditTextTypeDate("Fecha"), new LinearLayout.LayoutParams(AppBarLayout.LayoutParams.MATCH_PARENT, AppBarLayout.LayoutParams.MATCH_PARENT));
 
             listaView.add(v);
             listaView.add(v2);
             listaView.add(v3);
             listaView.add(v4);
-
+            listaView.add(v5);
             LinearLayoutObjectView linearLayoutObjectView = new LinearLayoutObjectView(getContext());
             LinearLayout h = (LinearLayout) linearLayoutObjectView.addLinearLayout(false);
 
